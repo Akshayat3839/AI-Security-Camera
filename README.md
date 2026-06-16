@@ -1,65 +1,199 @@
-# 🛡️ AI Security Camera (Smart Surveillance System)
+# AI Security Camera - Smart AI Surveillance System
 
-A real-time AI-powered security camera system built using Python and OpenCV that detects motion, captures evidence, records video, and logs events automatically.
+A real-time AI-powered surveillance system built using Python and OpenCV that transforms a normal webcam into a smart security camera.
 
-This project simulates a smart CCTV system using Computer Vision.
+The system performs real-time motion detection, captures security evidence, records suspicious activities, detects faces and persons, and maintains automated event logs.
 
----
-
-# 🚀 Features
-
-✅ Real-time motion detection using frame differencing  
-✅ Automatic image capture on motion detection  
-✅ Auto video recording during motion events  
-✅ Face detection using Haar Cascades  
-✅ Person detection using HOG descriptor  
-✅ Timestamp-based activity logging  
-✅ Live bounding boxes for motion, face, and person detection  
-✅ On-screen security HUD (FPS, status, alerts)  
-✅ Fully works using a normal webcam  
+Additionally, an AI-based hand gesture writing module enables touchless interaction using real-time hand landmark tracking.
 
 ---
 
-# 🛠️ Technologies Used
+## Features
 
-- Python 🐍  
-- OpenCV (Computer Vision)  
-- Haar Cascades (Face Detection)  
-- HOG Descriptor (Person Detection)  
-- OS Module (File Handling)  
-- Datetime (Logging System)  
+### Smart Surveillance System
+
+- Real-time motion detection using frame differencing
+- Automatic image capture during motion events
+- Automatic video recording when suspicious activity is detected
+- Face detection using Haar Cascade classifier
+- Person detection using HOG descriptor
+- Real-time bounding boxes for detected objects
+- Timestamp-based security event logging
+- Live security HUD displaying FPS, alerts, and system status
+- Works with a standard webcam
+
+### AI Gesture Writing Module
+
+- Real-time hand tracking using MediaPipe
+- Virtual writing using index finger movement
+- Gesture-based interaction system
+- One finger gesture for drawing
+- Two finger gesture for erasing
+- Three finger gesture for saving drawings
+- Contactless computer interaction
+- Real-time landmark visualization
 
 ---
 
-# 📦 Installation
+## Technologies Used
+
+- Python
+- OpenCV
+- MediaPipe
+- NumPy
+- Haar Cascade Classifier
+- HOG Descriptor
+- Computer Vision
+- Image Processing
+- File Handling
+- Event Logging System
+
+---
+
+## Project Architecture
+
+```
+AI-Security-Camera/
+
+│
+├── main.py                    # Main AI surveillance system
+├── gesture_writing.py         # Basic virtual writing module
+├── gesture_writing_v2.py      # Advanced gesture control module
+│
+├── captures/                  # Motion captured images
+├── recordings/                # Recorded security videos
+├── logs/                      # Activity logs
+├── drawings/                  # Saved gesture drawings
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Clone Repository
 
 ```bash
 git clone https://github.com/your-username/AI-Security-Camera.git
+
 cd AI-Security-Camera
+```
+
+### Install Dependencies
+
+```bash
 pip install opencv-python
+pip install mediapipe
+pip install numpy
+```
 
-▶️ Run the Project
+---
+
+## Running the Project
+
+### Start AI Security Camera
+
+```bash
 python main.py
+```
 
-AI-Security-Camera/
-│
-├── main.py               # Main application
-├── README.md
-├── captures/             # Saved images on motion
-├── recordings/          # Auto recorded videos
-├── logs/                # Activity logs
-└── videos/              # Optional storage
+### Start Gesture Writing Module
 
-🎯 How It Works
-Webcam captures live video
-Frames are compared to detect motion
-If motion is detected:
-Bounding boxes are drawn
-Image is saved automatically
-Video recording starts
-Event is logged with timestamp
-Face and person detection runs in parallel
-Live HUD shows system status
-⌨️ Controls
-Key	Action
-q	Quit program
+```bash
+python gesture_writing_v2.py
+```
+
+---
+
+## How It Works
+
+### Surveillance Pipeline
+
+```
+Webcam Feed
+      |
+      ↓
+Frame Processing
+      |
+      ↓
+Motion Detection
+      |
+      ↓
+Object Analysis
+      |
+      ├── Face Detection
+      |
+      ├── Person Detection
+      |
+      ├── Evidence Capture
+      |
+      └── Event Logging
+```
+
+### Gesture Writing Pipeline
+
+```
+Camera Input
+      |
+      ↓
+Hand Landmark Detection
+      |
+      ↓
+Finger Gesture Recognition
+      |
+      ↓
+Virtual Canvas Interaction
+      |
+      ↓
+Save / Erase / Draw Actions
+```
+
+---
+
+## Controls
+
+| Key | Action |
+|-----|--------|
+| Q | Quit application |
+| C | Clear gesture drawing canvas |
+
+---
+
+## Output
+
+The system automatically generates:
+
+- Captured images during motion events
+- Recorded security videos
+- Activity logs with timestamps
+- Saved virtual drawings
+
+---
+
+## Future Enhancements
+
+- Face recognition-based authentication
+- Email/SMS security alerts
+- Cloud storage integration
+- Multi-camera surveillance support
+- AI-based threat detection
+- Voice-controlled security commands
+- Mobile application dashboard
+
+---
+
+## Project Highlights
+
+- Built an end-to-end Computer Vision surveillance system
+- Integrated multiple AI detection techniques
+- Implemented real-time hand gesture interaction
+- Designed modular architecture for future AI upgrades
+
+---
+
+## Author
+
+**Akshaya**
+
+AI & Machine Learning Enthusiast
